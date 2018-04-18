@@ -1,4 +1,4 @@
-# jianshu
+# jianshu2
 
 > Nuxt.js project
 
