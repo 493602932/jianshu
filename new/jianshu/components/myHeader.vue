@@ -55,7 +55,7 @@
                 <!-- 右上角，登录和注册 -->
                 <!-- 导航部分 -->
                 <div class="container">
-
+                  <div class="row">
                     <b class="fa fa-bars" v-on:click="bars=!bars"></b>
                     <!-- <nav class="head-btn" v-show="bars">
                     <li>发现</li>
@@ -134,7 +134,7 @@
                   
                 </div>
 
-        
+            </div>
            </div>
          </nav>
      </div>
@@ -146,13 +146,11 @@ export default {
     return {
       a: false,
       notifyShow: false,
-      bars:false,
+      bars: false
       // headBars:false
     };
   },
-  methods:{
-
-  }
+  methods: {}
 };
 </script>
 <style scoped>
@@ -240,6 +238,7 @@ nav .user .drop-menu {
   z-index: 999;
   margin: 0;
   font-size: 15px;
+  background: white;
 }
 nav .user .drop-menu li a {
   padding: 10px 20px;
@@ -385,89 +384,86 @@ b:hover {
 
 } */
 
-
-@media (max-width:1440px) {
-        nav .nav-list>li a i {
-            display:none;
-        }
-        nav .nav-list .search form .search-input {
-            width:160px;
-        }
-        nav .nav-list .search form .search-input:focus {
-            width:240px;
-        }
-    }
-    @media (max-width:1080px) {
-        nav .nav-list .search form .search-input,nav .nav-list .search form .search-input:focus {
-            width:150px;
-        }
-        nav .nav-list li {
-            margin-right:5px;
-        }
-        nav .nav-list li span {
-            display:none;
-        }
-        nav .nav-list>li a i {
-            display:block;
-            margin:0;
-        }
-    }
-    @media (max-width: 767px) and (min-width: 320px) {
-        nav .nav-list {
-            display:block;
-            max-height: 340px;
-            overflow-y: auto;
-            width: 100vw;
-            border: none;
-            overflow-x: visible;
-            padding-right: 15px;
-            padding-left: 15px;
-            box-shadow: inset 0 1px 0 hsla(0,0%,100%,.1);
-            margin-left:-15px;
-            margin-right:-15px;
-            background: #fff;
-            position: absolute;
-            top: 56px;
-            
-        }
-        b {
+@media (max-width: 1440px) {
+  nav .nav-list > li a i {
+    display: none;
+  }
+  nav .nav-list .search form .search-input {
+    width: 160px;
+  }
+  nav .nav-list .search form .search-input:focus {
+    width: 240px;
+  }
+}
+@media (max-width: 1080px) {
+  nav .nav-list .search form .search-input,
+  nav .nav-list .search form .search-input:focus {
+    width: 150px;
+  }
+  nav .nav-list li {
+    margin-right: 5px;
+  }
+  nav .nav-list li span {
+    display: none;
+  }
+  nav .nav-list > li a i {
+    display: block;
+    margin: 0;
+  }
+}
+@media (max-width: 767px) and (min-width: 320px) {
+  nav .nav-list {
+    display: block;
+    max-height: 340px;
+    overflow-y: auto;
+    width: 100vw;
+    border: none;
+    overflow-x: visible;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, 0.1);
+    margin-left: -15px;
+    margin-right: -15px;
+    background: #fff;
+    position: absolute;
+    top: 56px;
+  }
+  b {
     display: block !important;
   }
-        nav .nav-list > li {
-            display:block;
-            float:none;
-            border-bottom: 1px solid #f0f0f0;
-        }
-        nav .nav-list >li a {
-            text-align:center;
-        }
-        nav .nav-list > li .drop-menu {
-            display:none;
-        }
-        nav .nav-list >li a i {
-            display:none;
-        }
-        nav .nav-list >li span {
-            display:block;
-        }
-        nav form input,nav form input:focus {
-            width: 100%!important;
-            display:block;
-        }
-    }
-    @media (min-width:768px) {
-        nav .nav-list {
-            float:left;
-            display: block!important;
-        }
-        nav .nav-list > li {
-            float:left;
-        }
-        b{
-          display: none;
-        }
-
-    }
-
-
+  nav .nav-list > li {
+    display: block;
+    float: none;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  nav .nav-list > li a {
+    text-align: center;
+  }
+  nav .nav-list > li .drop-menu {
+    display: none;
+  }
+  nav .nav-list > li a i {
+    display: none;
+  }
+  nav .nav-list > li span {
+    display: block;
+  }
+  nav form input,
+  nav form input:focus {
+    width: 100% !important;
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  nav .nav-list {
+    float: left;
+    display: block !important;
+  }
+  nav .nav-list > li {
+    float: left;
+  }
+  b {
+    display: none;
+  }
+}
 </style>
