@@ -1,3 +1,4 @@
+/**********************全局清除浏览器默认样式**************************/
 * {
     box-sizing: border-box;
 }
@@ -23,13 +24,16 @@ body {
 #sign-template {
     height:100%;
 }
+#default-template {
+    height:100%;
+}
 ul,ol,dl {
     list-style: none;
+    margin:0;
     padding:0;
-    margin: 0;
 }
-li{
-    line-height: 20px;
+li {
+    line-height:20px;
 }
 input,input:hover,input:active,input:focus {
     outline: none;
@@ -54,32 +58,30 @@ a:hover {
     color:#333;
     text-decoration: none;
 }
-
-/*********************** 首页需要的 *****************************/
-.container{
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
+/*************************************首页样式******************************************/
+.container {
+    padding-left:15px;
+    padding-right:15px;
+    margin-left:auto;
+    margin-right:auto;
 }
-.container::after{
-    clear: both;
+.container:after {
+    content:'';
+    clear:both;
+    display:table;
 }
-
-/* 大于992px */
-@media(min-width:992px){
-    .container{
-        width: 960px;
+/*大于992px*/
+@media (min-width:992px) {
+    .container {
+        width:960px;
     }
 }
-/* 小于1080px */
-@media(max-width:1080px){
-    .container{
-        width: 750px;
+/*小于1080px*/
+@media (max-width:1080px) {
+    .container {
+        width:750px;
     }
 }
-
-
 .row {
     margin-left: -15px;
     margin-right: -15px
@@ -1706,5 +1708,8 @@ a:hover {
         margin-left: 100%
     }
 }
+
+
+
 
 
