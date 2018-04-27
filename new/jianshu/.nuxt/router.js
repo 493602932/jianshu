@@ -6,7 +6,6 @@ Vue.use(Router)
 const _444c4f15 = () => import('..\\pages\\sign-up.vue' /* webpackChunkName: "pages_sign-up" */).then(m => m.default || m)
 const _2fb5f89f = () => import('..\\pages\\sign-in.vue' /* webpackChunkName: "pages_sign-in" */).then(m => m.default || m)
 const _0125fc60 = () => import('..\\pages\\p\\_id.vue' /* webpackChunkName: "pages_p__id" */).then(m => m.default || m)
-const _079ca1ba = () => import('..\\pages\\p\\id_.vue' /* webpackChunkName: "pages_p_id_" */).then(m => m.default || m)
 const _23a8943c = () => import('..\\pages\\index.vue' /* webpackChunkName: "pages_index" */).then(m => m.default || m)
 
 
@@ -80,13 +79,7 @@ export function createRouter () {
 		{
 			path: "/p/:id?",
 			component: _0125fc60,
-			children: [
-				{
-					path: "",
-					component: _079ca1ba,
-					name: "p-id"
-				}
-			]
+			name: "p-id"
 		},
 		{
 			path: "/",

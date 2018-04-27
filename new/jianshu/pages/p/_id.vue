@@ -74,43 +74,48 @@
                 </div>
                 <!--更多分享-->
                 <div class="meta-bottom">
-                    <div class="like">
+                    <div class="like" :class="{'islike':islike}" @click="islike=!islike">
                         <div class="like-btn">
-                            <a href="#">喜欢</a>
+                            <a href="javascript:void(0)">喜欢</a>
                         </div>
                         <div class="like-num">
-                            <a href="#">50</a>
+                            <a href="javascript:void(0)">50</a>
                         </div>
                     </div>
                     <div class="share">
                         <a href="#" class="share-btn">
-                            <i class="fa fa-weixin"></i>
+                            <i class="fa fa-qq qq"></i>
                         </a>
                         <a href="#" class="share-btn">
-                            <i class="fa fa-weibo"></i>
+                            <i class="fa fa-weibo weibo"></i>
                         </a>
                         <a href="#" class="share-btn">
-                            <i class="fa fa-weixin"></i>
+                            <i class="fa fa-weixin weixin"></i>
                         </a>
-                        <a href="#" class="more-share">
+                        <a href="#" class="share-btn more-share">
                             更多分享
                         </a>
                     </div>
                 </div>
+                <!--留言组件-->
+                <my-comment></my-comment>
             </div>
         </div>
     </div>
 </template>
 <script>
+    import myComment from '~/components/myComment'
     import myHeader from  '~/components/myHeader'
     export default {
         data () {
             return {
-                name:'page'
+                name:'page',
+                islike:false,
             }
         },
         components:{
-            myHeader
+            myHeader,
+            myComment
         }
     }
 </script>
